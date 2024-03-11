@@ -1,3 +1,8 @@
+CREATE DATABASE inventory_db;
+CREATE USER inventory_user WITH PASSWORD '123';
+GRANT ALL PRIVILEGES ON DATABASE inventory_db to inventory_user;
+\c inventory_db
+
 CREATE TABLE items (
     item_id SERIAL PRIMARY KEY,
     item_name VARCHAR(255) NOT NULL,
